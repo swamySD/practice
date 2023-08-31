@@ -1,0 +1,149 @@
+.Card{
+    max-height: 450px;
+    width:250px;
+    position: relative;
+}
+.Card1{
+    background-color:red;
+    color:white;
+    width:250px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:0;
+    left: -10px;
+    transition: transform 0.3s ease;
+    border-radius: 16px;
+    
+}
+.Card2{
+    background-color: yellow;
+    color:aliceblue;
+    width:250px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:0;
+    left: -20px;
+    margin-top: 30px;
+    transition: transform 0.3s ease;
+    border-radius: 16px;
+}
+  .Card3{
+    background-color:green;
+    color:aliceblue;
+    width:250px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 16px;
+    top:0;
+    left: -30px;
+    margin-top: 60px;
+    transition: transform 0.3s ease;
+}
+.Card1 {
+    z-index: 1;
+  }
+
+  .Card2 {
+    z-index: 2;
+  }
+
+  .Card3 {
+    z-index: 3;
+  }
+  .Card1:hover,
+  .Card2:hover
+   {
+    transform: translateY(-110px);
+    cursor: pointer;
+  }
+  .Card3:hover{
+    transform: translateY(0px);
+  }
+
+  .Card4{
+    margin-left: 45%;
+    background-color:blueviolet;
+    color:aliceblue;
+    width:250px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 16px;
+    top:0;
+    left: -30px;
+    margin-top: 60px;
+    transition: transform 0.3s ease;
+}
+.Card4:hover{
+    transform: rotateY(180);
+    cursor: pointer;
+}
+
+
+
+
+.card {
+    overflow: hidden;
+    margin-top: 250px;
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    transform: translateZ(0);
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    transform: translateZ(0); 
+  }
+  
+  .card.flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border-radius: 10px;
+    transform: translateZ(0); 
+  }
+  
+  .card-front {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .card-back {
+    background-color: #e74c3c;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  
