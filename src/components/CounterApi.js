@@ -16,7 +16,7 @@ function CounterApi() {
         
         getAddress(count)
     }
-   console.log(address)
+   
 return (
     <div className='counter'>
       <div className='button-container'>
