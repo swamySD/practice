@@ -1,0 +1,16 @@
+.counter{
+    display: flex;
+    flex-direction: column;
+}
+.button-container{
+    display: flex;
+    flex-direction: row;
+}
+.address-card{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-color: rgb(180, 246, 246);
+color: rgb(16, 16, 16);
+}
