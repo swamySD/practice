@@ -1,22 +1,28 @@
 // import Table from './components/table'
-import Card from './components/Card';
-import { useState,useEffect } from 'react';
-import { fetchData, fetchs } from './components/fetch';
-import './App.css';
-import Modal from './components/Modal';
-import ModalComponent from './components/ModalComponent';
-import CounterApi from './components/CounterApi';
+
+// import Card from './components/Card';
+import { useState,useEffect, useContext } from 'react';
+// import { fetchData, fetchs } from './components/fetch';
+// import './App.css';
+// import Modal from './components/Modal';
+// import ModalComponent from './components/ModalComponent';
+// import CounterApi from './components/CounterApi';
 
 
+import React from 'react';
+import FeatureFlag from './FeatureContext';
+import Usecallback from './components/Usecallback';
+import Todo from './components/Todo';
 // const dummyData = [
 //   { id: 1, name: 'Alice', age: 25, city: 'New York' },
 //   { id: 2, name: 'Bob', age: 30, city: 'Los Angeles' },
 //   { id: 3, name: 'Charlie', age: 28, city: 'Chicago' },
 //   // ... more data
 // ];
-
-function App() {
-  const [users,setUsers]=useState([])
+const App=()=> {
+  const {feature}=useContext(FeatureFlag)
+  console.log(feature)
+  // const [users,setUsers]=useState([])
 // const [time,setTime]=useState(0)
 // const [dataa,setDataa]=useState([])
 
@@ -51,16 +57,19 @@ function App() {
 //   return <h1>...Loading</h1>
 // }
 
-useEffect(()=>{
- fetch('https://jsonplaceholder.typicode.com/users')
- .then((response)=>response.json())
- .then((json)=>{
-  console.log(users)
-  setUsers(json)
-})
-},[])
+// useEffect(()=>{
+//  fetch('https://jsonplaceholder.typicode.com/users')
+//  .then((response)=>response.json())
+//  .then((json)=>{
+//   console.log(users)
+//   setUsers(json)
+// })
+// },[])
+
+
 
   return (
+    
     <div className="App">
     
     {/* <ModalComponent/> */}
@@ -96,9 +105,15 @@ useEffect(()=>{
 
 {/* click button with when increment the api calls the clicked counting  */}
 
- <CounterApi/>
+ {/* <CounterApi/> */}
+{/* <h1>{feature.isEnabled? "Google":"facebook"}</h1>
+<h1>{feature.isEnabled? "Google":"facebook"}</h1> */}
 
+
+{/* <Usecallback/> */}
+  <Todo/>
     </div>
+    
   );
 
 }

@@ -1,10 +1,41 @@
 .counter{
     display: flex;
     flex-direction: column;
+    width: 1200px;
+}
+.counter-button{
+    width: 180px;
+    height: 30px;
+    border-width: 0px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: black;
+    margin-right: 60px;
+    
 }
 .button-container{
     display: flex;
     flex-direction: row;
+    margin-top: 100px;
+    
+    
+}
+.count-span{
+    background-color: aqua;
+    color:black;
+    height: 30px;
+    width: 120px;
+    border-radius: 6px;
+    text-align: center;
+    padding-top:2px;
+}
+
+
+.ul{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
 }
 .address-card{
 display: flex;
@@ -13,4 +44,12 @@ justify-content: center;
 align-items: center;
 background-color: rgb(180, 246, 246);
 color: rgb(16, 16, 16);
+height: 200px;
+width: 270px;
+margin:10px;
+margin-bottom: 15px;
+border-radius: 12px;
+}
+.address-details{
+    margin-top: 16px;
 }
